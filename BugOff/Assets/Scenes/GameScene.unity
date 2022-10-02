@@ -2612,7 +2612,6 @@ GameObject:
   - component: {fileID: 1427530961}
   - component: {fileID: 1427530960}
   - component: {fileID: 1427530965}
-  - component: {fileID: 1427530966}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2709,28 +2708,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1427530959}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c51d724cfa6c400d882d58a2fcc0060, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1818360609 &1427530966
-RotationConstraint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1427530959}
-  m_Enabled: 1
-  m_Weight: 1
-  m_RotationAtRest: {x: 0, y: 0, z: 0}
-  m_RotationOffset: {x: 0, y: 0, z: 0}
-  m_AffectRotationX: 1
-  m_AffectRotationY: 1
-  m_AffectRotationZ: 1
-  m_IsContraintActive: 1
-  m_IsLocked: 1
-  m_Sources: []
+  player: {fileID: 0}
 --- !u!1 &1435712374
 GameObject:
   m_ObjectHideFlags: 0

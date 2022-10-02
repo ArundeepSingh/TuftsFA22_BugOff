@@ -37,6 +37,7 @@ public class HealthBarThirdPerson : MonoBehaviour
         }
         if (collision.gameObject.tag == "EnemyKnifeRoach")
         {
+            Debug.Log("EnemyKnifeRoach collision");
             TakeDamage(damageAmt * 1.5f);
         }
     }

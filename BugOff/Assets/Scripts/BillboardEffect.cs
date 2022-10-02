@@ -4,27 +4,19 @@ using UnityEngine;
 
 public class BillboardEffect : MonoBehaviour
 {
-    // void Update()
-    // {
-    //     transform
-    //         .LookAt(transform.position +
-    //         Camera.main.transform.rotation * -Vector3.back,
-    //         Camera.main.transform.rotation * -Vector3.down);
-    // }
-    // void Update()
-    // {
-    //     Camera camera = Camera.main;
-    //     transform
-    //         .LookAt(transform.position +
-    //         camera.transform.rotation * Vector3.forward,
-    //         camera.transform.rotation * Vector3.up);
-    // }
+    private Transform playerTransform;
+
+    private void Start()
+    {
+        playerTransform = GameObject.FindWithTag("Player").transform;
+    }
+
     void Update()
     {
-        transform.forward = Camera.main.transform.forward;
+        transform.position =
+            new Vector3(playerTransform.position.x,
+                playerTransform.position.y + 1.2f,
+                0);
+        transform.eulerAngles = new Vector3(0, 0, 0);
     }
 }
-
-//OR TRY:
-
-//OR TRY:

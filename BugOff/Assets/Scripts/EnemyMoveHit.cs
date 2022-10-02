@@ -16,7 +16,7 @@ public class EnemyMoveHit : MonoBehaviour
 
     public int EnemyLives = 2;
 
-    public float knockBackForce = 20f;
+    private float knockBackForce = 1500f;
 
     //    private GameHandler gameHandler;
     public float attackRange = 5;
@@ -81,14 +81,13 @@ public class EnemyMoveHit : MonoBehaviour
 
             //anim.SetBool("Attack", true);
             //  gameHandler.playerGetHit(damage);
-            //This method adds force to the player, pushing them back without teleporting (choose above or below).
+            // calculate force vector
+            var force = transform.position - other.transform.position;
+
+            // normalize force vector to get direction only and trim magnitude
+            force.Normalize();
             Rigidbody2D pushRB = other.gameObject.GetComponent<Rigidbody2D>();
-            Vector2 moveDirectionPush =
-                rb2D.transform.position - other.transform.position;
-            pushRB
-                .AddForce(moveDirectionPush.normalized * knockBackForce * -1f,
-                ForceMode2D.Impulse);
-            StartCoroutine(EndKnockBack(pushRB));
+            pushRB.AddForce(-force * knockBackForce);
         }
 
         if (other.gameObject.tag == "Weapon")
@@ -116,9 +115,9 @@ public class EnemyMoveHit : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, attackRange);
     }
 
-    IEnumerator EndKnockBack(Rigidbody2D otherRB)
-    {
-        yield return new WaitForSeconds(0.2f);
-        otherRB.velocity = new Vector3(0, 0, 0);
-    }
+    //     IEnumerator EndKnockBack(Rigidbody2D otherRB)
+    //     {
+    //         yield return new WaitForSeconds(0.2f);
+    //         otherRB.velocity = new Vector3(0, 0, 0);
+    //     }
 }
