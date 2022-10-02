@@ -17,33 +17,28 @@ public class HealthBarThirdPerson : MonoBehaviour
 
     public Color unhealthyColor = new Color(0.8f, 0.3f, 0.3f);
 
-    //temporary time variables:
-    public float timeToDamage = 5f;
-
-    private float theTimer;
-
     public float damageAmt = 10f;
 
     private void Start()
     {
         health = startHealth;
-        theTimer = timeToDamage;
-    }
-
-    // this timer is just to test damage. Comment-out when no longer needed
-    void FixedUpdate()
-    {
-        theTimer -= Time.deltaTime;
-        if (theTimer <= 0)
-        {
-            TakeDamage (damageAmt);
-            theTimer = timeToDamage;
-        }
     }
 
     public void SetColor(Color newColor)
     {
         healthBar.GetComponent<Image>().color = newColor;
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "EnemyRoach")
+        {
+            TakeDamage (damageAmt);
+        }
+        if (collision.gameObject.tag == "EnemyKnifeRoach")
+        {
+            TakeDamage(damageAmt * 1.5f);
+        }
     }
 
     public void TakeDamage(float amount)

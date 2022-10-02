@@ -57,7 +57,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5722042558367777651, guid: 1507f0792a39f594293a6cca16d40e93, type: 3}
       propertyPath: m_Name
-      value: KnifeRoach
+      value: KnifeRoach Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 5722042558367777651, guid: 1507f0792a39f594293a6cca16d40e93, type: 3}
+      propertyPath: m_TagString
+      value: EnemyKnifeRoach
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1507f0792a39f594293a6cca16d40e93, type: 3}

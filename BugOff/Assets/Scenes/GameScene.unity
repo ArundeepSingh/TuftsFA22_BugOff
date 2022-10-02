@@ -2233,6 +2233,7 @@ GameObject:
   - component: {fileID: 687059754}
   - component: {fileID: 687059753}
   - component: {fileID: 687059755}
+  - component: {fileID: 687059756}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2337,6 +2338,23 @@ MonoBehaviour:
   bulletForce: 20
   firePoint: {fileID: 42591960}
   bulletPrefab: {fileID: 4020388733391095012, guid: a7202a17b26dd48d49448d2c6c8dc1ad, type: 3}
+--- !u!114 &687059756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687059750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3ce15bea347b4566a9330547b9c275f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startHealth: 100
+  healthBar: {fileID: 1317024488}
+  healthyColor: {r: 0.3, g: 0.8, b: 0.3, a: 1}
+  unhealthyColor: {r: 0.8, g: 0.3, b: 0.3, a: 1}
+  damageAmt: 10
 --- !u!1 &917581026
 GameObject:
   m_ObjectHideFlags: 0
@@ -2593,7 +2611,6 @@ GameObject:
   - component: {fileID: 1427530962}
   - component: {fileID: 1427530961}
   - component: {fileID: 1427530960}
-  - component: {fileID: 1427530964}
   - component: {fileID: 1427530965}
   - component: {fileID: 1427530966}
   m_Layer: 5
@@ -2685,24 +2702,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 1.38}
   m_SizeDelta: {x: 3, y: 3}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1427530964
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1427530959}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3ce15bea347b4566a9330547b9c275f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startHealth: 100
-  healthBar: {fileID: 1317024488}
-  healthyColor: {r: 0.3, g: 0.8, b: 0.3, a: 1}
-  unhealthyColor: {r: 0.8, g: 0.3, b: 0.3, a: 1}
-  timeToDamage: 5
-  damageAmt: 10
 --- !u!114 &1427530965
 MonoBehaviour:
   m_ObjectHideFlags: 0
