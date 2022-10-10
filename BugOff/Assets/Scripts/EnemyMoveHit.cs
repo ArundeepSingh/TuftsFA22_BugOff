@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyMoveHit : MonoBehaviour
 {
@@ -25,6 +26,10 @@ public class EnemyMoveHit : MonoBehaviour
 
     private float scaleX;
 
+    public GameObject bugsExterminatedText;
+
+    public GameObject gameController;
+
     void Start()
     {
         anim = GetComponentInChildren<Animator>();
@@ -38,6 +43,15 @@ public class EnemyMoveHit : MonoBehaviour
                     .FindGameObjectWithTag("Player")
                     .GetComponent<Transform>();
         }
+
+        gameController =
+            GameObject
+                .FindGameObjectWithTag("GameController")
+                .GetComponent<GameController>()
+                .gameObject;
+
+        bugsExterminatedText =
+            GameObject.Find("ExterminatedText").GetComponent<Text>().gameObject;
 
         //   if (GameObject.FindWithTag ("GameHandler") != null) {
         //       gameHandler = GameObject.FindWithTag ("GameHandler").GetComponent<GameHandler> ();
@@ -95,6 +109,18 @@ public class EnemyMoveHit : MonoBehaviour
             EnemyLives -= 1;
             if (EnemyLives <= 0)
             {
+                gameController
+                    .GetComponent<GameController>()
+                    .IncrementExterminatedBugs();
+
+                Text bugsExterminatedTextObject =
+                    bugsExterminatedText.GetComponent<Text>();
+                bugsExterminatedTextObject.text =
+                    "Bugs Exterminated: " +
+                    gameController
+                        .GetComponent<GameController>()
+                        .bugsExterminated
+                        .ToString();
                 Destroy (gameObject);
             }
         }

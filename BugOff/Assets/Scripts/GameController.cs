@@ -6,9 +6,12 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
+    public int bugsExterminated = 0;
+
     // Start is called before the first frame update
     void Start()
     {
+        bugsExterminated = 0;
     }
 
     // Update is called once per frame
@@ -28,5 +31,10 @@ public class GameController : MonoBehaviour
 #else
         Application.Quit();
 #endif
+    }
+
+    public void IncrementExterminatedBugs()
+    {
+        bugsExterminated += 1;
     }
 }
