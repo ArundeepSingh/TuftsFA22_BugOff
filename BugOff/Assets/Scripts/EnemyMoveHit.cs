@@ -116,7 +116,7 @@ public class EnemyMoveHit : MonoBehaviour
                 Text bugsExterminatedTextObject =
                     bugsExterminatedText.GetComponent<Text>();
                 bugsExterminatedTextObject.text =
-                    "Bugs Exterminated: " +
+                    "BUG EXTERMINATED: " +
                     gameController
                         .GetComponent<GameController>()
                         .bugsExterminated
