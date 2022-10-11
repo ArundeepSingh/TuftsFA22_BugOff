@@ -55,6 +55,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5722042558367777649, guid: 1507f0792a39f594293a6cca16d40e93, type: 3}
+      propertyPath: attackRange
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 5722042558367777651, guid: 1507f0792a39f594293a6cca16d40e93, type: 3}
       propertyPath: m_Name
       value: KnifeRoach Variant

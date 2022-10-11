@@ -11,8 +11,8 @@ public class DeathScoreDisplay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        string score = gameController
-                        .GetComponent<GameController>()
+        string score = GameController
+                        // .GetComponent<GameController>()
                         .bugsExterminated
                         .ToString();
         txt.text = "Your Score: " + score;
