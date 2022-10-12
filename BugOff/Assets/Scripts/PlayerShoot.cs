@@ -12,7 +12,10 @@ public class PlayerShoot : MonoBehaviour
 
     void Update()
     {
-        if ((Input.GetButtonDown("Fire1")) || (Input.GetKeyDown("space")))
+        if (
+            !GameController.paused &&
+            ((Input.GetButtonDown("Fire1")) || (Input.GetKeyDown("space")))
+        )
         {
             Shoot();
         }

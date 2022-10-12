@@ -19,6 +19,8 @@ public class HealthBarThirdPerson : MonoBehaviour
 
     public float damageAmt = 10f;
 
+    private bool canTakeDamage = true;
+
     private void Start()
     {
         health = startHealth;
@@ -29,21 +31,38 @@ public class HealthBarThirdPerson : MonoBehaviour
         healthBar.GetComponent<Image>().color = newColor;
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    // void OnCollisionEnter2D(Collision2D collision)
+    // {
+    //     if (collision.gameObject.tag == "EnemyRoach")
+    //     {
+    //         TakeDamage (damageAmt);
+    //     }
+    //     if (collision.gameObject.tag == "EnemyKnifeRoach")
+    //     {
+    //         TakeDamage(damageAmt * 1.5f);
+    //     }
+    // }
+    public void OnCollisionStay2D(Collision2D other)
     {
-        if (collision.gameObject.tag == "EnemyRoach")
+        if (other.gameObject.tag == "EnemyRoach")
         {
-            TakeDamage (damageAmt);
+            if (canTakeDamage)
+            {
+                StartCoroutine(TakeDamage(damageAmt));
+            }
         }
-        if (collision.gameObject.tag == "EnemyKnifeRoach")
+        if (other.gameObject.tag == "EnemyKnifeRoach")
         {
-            Debug.Log("EnemyKnifeRoach collision");
-            TakeDamage(damageAmt * 1.5f);
+            if (canTakeDamage)
+            {
+                StartCoroutine(TakeDamage(damageAmt * 1.5f));
+            }
         }
     }
 
-    public void TakeDamage(float amount)
+    public IEnumerator TakeDamage(float amount)
     {
+        canTakeDamage = false;
         health -= amount;
         healthBar.fillAmount = health / startHealth;
 
@@ -64,14 +83,19 @@ public class HealthBarThirdPerson : MonoBehaviour
         {
             SetColor (healthyColor);
         }
+
+        yield return new WaitForSecondsRealtime(0.5f);
+
+        canTakeDamage = true;
     }
 
     public void Die()
     {
         Debug.Log("You Died So Much");
+
         // death stuff. change scene? how about a particle effect?
         //Vector3 objPos = this.transform.position
         //Instantiate(deathEffect, objPos, Quaternion.identity) as GameObject;
-        SceneManager.LoadScene ("DeathScene");
+        SceneManager.LoadScene("DeathScene");
     }
 }
