@@ -342,7 +342,6 @@ GameObject:
   m_Component:
   - component: {fileID: 113140481}
   - component: {fileID: 113140480}
-  - component: {fileID: 113140479}
   m_Layer: 0
   m_Name: SpawnPoint1
   m_TagString: Untagged
@@ -350,32 +349,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &113140479
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 113140478}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!212 &113140480
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2871,15 +2844,23 @@ MonoBehaviour:
     enemy: {fileID: 5722042558367777648, guid: 1507f0792a39f594293a6cca16d40e93, type: 3}
     count: 2
     rate: 0.5
-  - name: Roaches
+  - name: KnifeRoaches
     enemy: {fileID: 8610011992837075257, guid: d3817725e70485b46b6b6785641705c5, type: 3}
+    count: 1
+    rate: 0.5
+  - name: SwordSpiders
+    enemy: {fileID: 437704520265612867, guid: 248c5fb36364a2a4bafe49b38b08b5c2, type: 3}
+    count: 1
+    rate: 0.5
+  - name: BlueAxes
+    enemy: {fileID: 6469100722811765937, guid: e941d963524ec314784cfc06f8b914e2, type: 3}
     count: 1
     rate: 0.5
   spawnPoints:
   - {fileID: 113140481}
   - {fileID: 857741567}
   - {fileID: 1995831144}
-  timeBetweenWaves: 5
+  timeBetweenWaves: 3
 --- !u!1 &857741564
 GameObject:
   m_ObjectHideFlags: 0
@@ -2890,7 +2871,6 @@ GameObject:
   m_Component:
   - component: {fileID: 857741567}
   - component: {fileID: 857741566}
-  - component: {fileID: 857741565}
   m_Layer: 0
   m_Name: SpawnPoint2
   m_TagString: Untagged
@@ -2898,32 +2878,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &857741565
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 857741564}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!212 &857741566
 SpriteRenderer:
   m_ObjectHideFlags: 0
