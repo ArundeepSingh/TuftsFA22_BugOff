@@ -182,7 +182,7 @@ MonoBehaviour:
   rb2D: {fileID: 0}
   speed: 4
   damage: 10
-  EnemyLives: 3
+  EnemyLives: 1
   attackRange: 100
   isAttacking: 0
   bugsExterminatedText: {fileID: 0}

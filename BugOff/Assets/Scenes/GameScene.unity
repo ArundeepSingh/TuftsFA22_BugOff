@@ -2701,6 +2701,7 @@ GameObject:
   - component: {fileID: 687059753}
   - component: {fileID: 687059755}
   - component: {fileID: 687059756}
+  - component: {fileID: 687059757}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2822,6 +2823,102 @@ MonoBehaviour:
   healthyColor: {r: 0.3, g: 0.8, b: 0.3, a: 1}
   unhealthyColor: {r: 0.8, g: 0.3, b: 0.3, a: 1}
   damageAmt: 10
+--- !u!82 &687059757
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687059750}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: bfedb42e9797542018d4e7d410872ad5, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &721061183 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 738041956935398673, guid: 73e3b11261ac340fc96d002148c31018, type: 3}
@@ -2842,20 +2939,20 @@ MonoBehaviour:
   waves:
   - name: Roaches
     enemy: {fileID: 5722042558367777648, guid: 1507f0792a39f594293a6cca16d40e93, type: 3}
-    count: 2
-    rate: 0.5
+    count: 20
+    rate: 1
   - name: KnifeRoaches
     enemy: {fileID: 8610011992837075257, guid: d3817725e70485b46b6b6785641705c5, type: 3}
-    count: 1
-    rate: 0.5
+    count: 14
+    rate: 0.75
   - name: SwordSpiders
     enemy: {fileID: 437704520265612867, guid: 248c5fb36364a2a4bafe49b38b08b5c2, type: 3}
-    count: 1
-    rate: 0.5
+    count: 9
+    rate: 0.65
   - name: BlueAxes
     enemy: {fileID: 6469100722811765937, guid: e941d963524ec314784cfc06f8b914e2, type: 3}
-    count: 1
-    rate: 0.5
+    count: 3
+    rate: 0.2
   spawnPoints:
   - {fileID: 113140481}
   - {fileID: 857741567}

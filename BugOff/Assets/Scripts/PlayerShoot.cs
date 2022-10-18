@@ -17,6 +17,7 @@ public class PlayerShoot : MonoBehaviour
             ((Input.GetButtonDown("Fire1")) || (Input.GetKeyDown("space")))
         )
         {
+            GetComponent<AudioSource>().Play();    
             Shoot();
         }
     }
