@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WaveSpawner : MonoBehaviour
 {
@@ -59,8 +60,7 @@ public class WaveSpawner : MonoBehaviour
         waveCountdown = timeBetweenWaves;
 
         if (nextWave + 1 > waves.Length - 1) {
-            nextWave = 0;
-            Debug.Log("ALL WAVES COMPLETED! Looping.");
+            SceneManager.LoadScene("EndScene");
         } else {
             nextWave++;
         }
@@ -94,6 +94,6 @@ public class WaveSpawner : MonoBehaviour
 
     void SpawnEnemy(Transform enemy) {
         Transform sp = spawnPoints[Random.Range(0, spawnPoints.Length)];
-        Instantiate(enemy, sp.position, sp.rotation);
+        Instantiate(enemy, sp.position, Quaternion.identity);
     }
 }
