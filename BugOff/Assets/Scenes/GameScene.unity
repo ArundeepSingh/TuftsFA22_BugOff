@@ -3771,7 +3771,7 @@ MonoBehaviour:
   bulletForce: 20
   firePoint: {fileID: 42591960}
   bulletPrefab: {fileID: 4020388733391095012, guid: a7202a17b26dd48d49448d2c6c8dc1ad, type: 3}
-  shootDelay: 0.1
+  shootDelay: 0.5
 --- !u!114 &687059756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3905,23 +3905,23 @@ MonoBehaviour:
   waves:
   - name: KnifeRoaches
     enemy: {fileID: 8610011992837075257, guid: d3817725e70485b46b6b6785641705c5, type: 3}
-    count: 20
+    count: 10
     rate: 1
   - name: SwordSpider
     enemy: {fileID: 437704520265612867, guid: 248c5fb36364a2a4bafe49b38b08b5c2, type: 3}
-    count: 14
+    count: 7
     rate: 0.75
   - name: BlueAxes
     enemy: {fileID: 6469100722811765937, guid: e941d963524ec314784cfc06f8b914e2, type: 3}
-    count: 9
+    count: 5
     rate: 0.65
   - name: Centipede
     enemy: {fileID: 3868112049570750394, guid: 6d09d2b6942f3074d993b920d4280101, type: 3}
-    count: 3
+    count: 2
     rate: 0.2
   - name: Ant
     enemy: {fileID: 5964200471065180300, guid: 8ee59853b30d292439973a1b4a6af646, type: 3}
-    count: 3
+    count: 1
     rate: 0.2
   spawnPoints:
   - {fileID: 1448095194}
