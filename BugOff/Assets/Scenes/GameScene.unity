@@ -3771,6 +3771,7 @@ MonoBehaviour:
   bulletForce: 20
   firePoint: {fileID: 42591960}
   bulletPrefab: {fileID: 4020388733391095012, guid: a7202a17b26dd48d49448d2c6c8dc1ad, type: 3}
+  shootDelay: 0.1
 --- !u!114 &687059756
 MonoBehaviour:
   m_ObjectHideFlags: 0
