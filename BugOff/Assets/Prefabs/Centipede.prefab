@@ -23,6 +23,14 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.04839021
       objectReference: {fileID: 0}
+    - target: {fileID: 8610011992837075256, guid: d3817725e70485b46b6b6785641705c5, type: 3}
+      propertyPath: speed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8610011992837075256, guid: d3817725e70485b46b6b6785641705c5, type: 3}
+      propertyPath: EnemyLives
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8610011992837075257, guid: d3817725e70485b46b6b6785641705c5, type: 3}
       propertyPath: m_RootOrder
       value: 0

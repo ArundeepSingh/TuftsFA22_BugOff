@@ -9,7 +9,7 @@ public class PlayerShoot : MonoBehaviour
     public Transform firePoint;
 
     public GameObject bulletPrefab;
-    public float shootDelay = 0.1f;
+    public float shootDelay = 0.5f;
     private float timeBetweenShots = 0;
 
     void Update()
